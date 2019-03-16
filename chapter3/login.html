@@ -1,0 +1,91 @@
+<html>
+<head>
+</head>
+
+<body>
+    <form name="form1" method="post" action="">
+	    <table width="221" border="1" cellspacing="0" cellpadding="0" 
+		border-color="#FFFFFF" border-left-color="#CCCCCC" border-right-color="#FFFFFF">
+		    <tr>
+			    <td height="30" colspan="2" background-color="#EEEEEE">·用户登录</td>
+			</tr>
+			<tr>
+			    <td width="59" height="30">用户名：</td>
+				<td width="162"><input name="user1" type="text" id="username"></td>
+			</tr>
+			<tr>
+			    <td height="30">密码：</td>
+				<td><input name="pwd1" type="text" id="password"></td>
+			</tr>
+			<tr>
+			    <td height="30" colspan="2" align="center">
+				<input name="Button" type="button" class="btn_grey" value="登录" onclick="check()">
+				<input name="Submit2" type="reset" class="btn_grey" value="重置" onclick="day()"></td>
+			</tr>
+		</table>
+	</form>
+	
+	<script type="text/javascript">
+	    function check(){
+		    var name = form1.user1.value;
+			var pwd = form1.pwd1.value;
+			if ((name == "") || (name == null)){
+			    alert("请输入用户名");
+				form1.user1.focus();
+				return;
+			} else if ((pwd == "") || (pwd == null)){
+			    alert("请输入密码");
+				form1.pwd1.focus();
+				return;
+			} else{
+			    alert("登陆成功");
+			    form1.submit();
+			}
+		}
+		
+	    function date(){
+		    var now = new Date();
+			var hour = now.getHours();
+			if ((hour>5) && (hour<=11)){
+			    alert("早上好");
+			} else if ((hour>11) && (hour<=17)){
+			    alert("下午好");
+			} else if ((hour>17) && (hour<=23)){
+			    alert("晚上好");
+			} else{
+			    alert("该休息了");
+			}
+		}
+		
+		function day(){
+		    var now = new Date();
+			var day = now.getDay();
+			var week;
+			switch(day){
+			    case 1:
+				    week="星期一";
+				    break;
+			    case 2:
+				    week="星期二";
+				    break;
+			    case 3:
+				    week="星期三";
+				    break;
+			    case 4:
+				    week="星期四";
+				    break;
+			    case 5:
+				    week="星期五";
+				    break;
+			    case 6:
+				    week="星期六";
+				    break;
+			    case 7:
+				    week="星期日";
+				    break;
+			}
+			document.write("今天是"+week);
+		}
+	</script>
+</body>
+</html>
