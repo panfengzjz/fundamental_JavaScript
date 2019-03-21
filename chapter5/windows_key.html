@@ -7,6 +7,15 @@
 			    alert("hello world!")
 			}
 		}
+		
+		function gosite(){
+		    if (event.button == 2){
+		        alert("hello world");
+				window.open("http://192.168.1.1");
+				return false;
+			}
+		}
+		document.onmousedown = gosite;
 		document.onkeydown = example;
 	</script>
 </head>

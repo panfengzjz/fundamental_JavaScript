@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	    <title>跟随鼠标移动的文字</title>
+		<style>
+		.move_out{position:relative; cursor:hand; font-family:"华文行楷"}
+		</style>
+</head>
+
+
+<script type="text/javascript">
+	var move_out=false;
+	var x,y,z;
+	function move(){
+	    if (event.buttom == move_out){
+		    z.style.pixelLeft = temporarily1 + event.clientX - x;
+			z.style.pixelTop  = temporarily2 + event.clientY - y;
+			return false;
+		}
+	}
+	
+	function down(){
+	    if (event.srcElement.className == "move_out"){
+		    move_out = true;
+			z = event.srcElement;
+			temporarily1 = z.style.pixelLeft;
+			temporarily2 = z.style.pixelTop;
+			x = event.clientX;
+			y = event.clientY;
+			document.onmousemove = move;
+		} else{
+		    move_out = false;
+		}
+	}
+	
+	document.onmousedown = down;
+</script>
+
+<body>
+    <font color=0000ff size=10 class="move_out">明日</font>
+</body>
+</html>
