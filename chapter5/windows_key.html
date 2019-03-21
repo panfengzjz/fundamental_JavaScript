@@ -1,0 +1,25 @@
+<html>
+<head>
+
+	<script type="text/javascript">
+		function example(){
+		    if (window.event.ctrlKey && window.event.altKey && window.event.shiftKey){
+			    alert("hello world!")
+			}
+		}
+		
+		function gosite(){
+		    if (event.button == 2){
+		        alert("hello world");
+				window.open("http://192.168.1.1");
+				return false;
+			}
+		}
+		document.onmousedown = gosite;
+		document.onkeydown = example;
+	</script>
+</head>
+
+<body>
+</body>
+</html>
