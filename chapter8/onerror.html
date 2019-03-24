@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>onerror 事件</title>
+    <script type="text/javascript">
+	    window.onerror = function(ms, Url, Line){
+		    alert("您调用的函数不存在\n" +ms+ "\n" +Url+ "\n" +Line+ "\n");
+			return true;
+		}
+		function ImgLoad(){
+		    document.images[0].onerror = function(){
+			    alert("您调用的图像不存在\n");
+			}
+			document.images[0].src = "test.gif";
+		}
+		
+	</script>
+</head>
+
+<body onload="ImgLoad()">
+    <script type="text/javascript">
+	    onHave();
+	</script>
+<img/>
+</body>
+</html>
