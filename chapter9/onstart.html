@@ -1,0 +1,22 @@
+<!--一点都没用，能滚动但是颜色没有变化-->
+
+<marquee onstart="pp()">
+如果时光可以倒流，我还是会选择如今的路，只是不那么怯懦。是否还是能和你相遇，又可以在一起多久。
+你特么上班时间在做啥梦呢？！还想不想干了？！赶紧工作，不然早点滚蛋！
+</marquee>
+
+<script type="text/javascript">
+<!--
+    var arrayObj = new Array("#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#00FFFF", "#FF00FF");
+	var i = 0;
+	function pp(){
+	    var e = window.event;
+		var obj = e.srcElement;
+		obj.direction = "up";
+		if ( i > (arrayObj.length-1))
+		    i=0;
+		obj.style.color = arrayObj[i];
+		i = i+1;
+	}
+//-->
+</script>

@@ -1,0 +1,11 @@
+
+<form name="form1" method="post" action="">
+    <!--input name="textfield" type="text" onpaste="return false"-->
+    <input name="textfield" type="text" onbeforepaste="return clearup()">
+</form>
+
+<script language="javascript">
+    function clearup(){
+	    window.clipboardData.setData("text", "");
+	}
+</script>
