@@ -1,0 +1,16 @@
+<!--选中hello，也没出现弹窗-->
+
+<body>
+<form name="form1" method="post" action="">
+    <input name="textfield" type="text" onselect="return Tselect()" value="hello! Liping.">
+</form>
+
+<script language="javascript">
+    function Tselect(){
+	    var txt = document.selection.createRange().text;
+		if (txt=="hello!"){
+		    alert("你当前所选择的内容为："+txt);
+		}
+	}
+</script>
+</body>
