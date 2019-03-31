@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script type="text/javascript">
+	    var Arraycolor=new Array("olive", "teal", "red", "blue", "maroon", "navy",
+		"lime", "fuschia", "green", "purple", "gray", "yellow", "aqua", "white", "silver");
+		var n=0;
+		function turncolors(){
+		    if (n == (Arraycolor.length-1))
+			    n=0;
+			n++;
+			document.bgColor = Arraycolor[n];
+		}
+	</script>
+	
+	<form name="form1" method="post" action="">
+	    <p>
+		<input type="button" name="Submit" value="CHANGE BACKGROUND" onclick="turncolors()">
+		</p>
+		<p>press button to change color</p>
+	</form>
+</head>
+
+<body>
+</body>
+</html>
